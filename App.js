@@ -1,12 +1,34 @@
 import React from "react";
 import NavBar from "./components/NavBar";
+import RestaurantBody from "./components/RestaurantBody";
+import ipconfig from "./ipconfig.json";
 
+export const config = { endpoint : ipconfig.apiUrl}
+{/* 
+        Header
+            - logo
+            - nav items
+            - cart
+        Body
+            - Search bar
+            - Restaurent List
+                -Restuarent Card
+                    -Image
+                    -Name
+                    -Rating
+                    -Cousines
+        Footer
+            - Links
+            - Copyright
+    */}
 
-const App = () => {
+const app = () => {
     return(
     <>
+        {/* Navbar using MUI */}
         <NavBar />
+        <RestaurantBody />
     </>)
 }
 
-export default App
+export default app
