@@ -9,13 +9,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 import logo from '../logo.png'
+import {useNavigate} from "react-router-dom"
 
 const pages = ['Home', 'About', 'Contact', 'Cart'];
 
 function ResponsiveAppBar() {
+
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = useState(null);
  
 
@@ -23,7 +25,36 @@ function ResponsiveAppBar() {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (e) => {
+    e.preventDefault();
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    navigate(`/${e.target.innerText.toLowerCase()}`)
+    console.log(e.target.innerText)
+    
     setAnchorElNav(null);
   };
 
